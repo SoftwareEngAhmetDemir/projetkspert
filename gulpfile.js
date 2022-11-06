@@ -12,10 +12,17 @@ gulp.task("import", function (done) {
   gulp.src(["src/js/index.js"]).pipe(minify()).pipe(gulp.dest("dist"));
   done();
 });
-
+gulp.task("fonts", function (done) {
+  gulp.src(["src/fonts/**"]).pipe(minify()).pipe(gulp.dest("dist/fonts"));
+  done();
+});
+gulp.task("assets", function (done) {
+  gulp.src(["src/assets/**"]).pipe(minify()).pipe(gulp.dest("dist/assets"));
+  done();
+});
 gulp.task("include",function (done) {
   gulp
-    .src(["src/index.html"])
+    .src(["src/index.html","includes/**.html"])
     .pipe(plumber())
     .pipe(
       fileinclude({
@@ -76,12 +83,14 @@ gulp.task("watch", function (done) {
     gulp.task("include"),
     gulp.task("css"),
     gulp.task("scss"),
-    gulp.task("webserver")
+    gulp.task("assets"),
+    gulp.task("fonts"),
+    gulp.task("webserver"),
   )(); // call all tasks for the first time
 
   gulp.watch(
     ["src/**"],
-    gulp.series("include", "css", "scss", "import"),
+    gulp.series("include", "css", "scss", "import","fonts","assets"),
     function (file) {
      
     }

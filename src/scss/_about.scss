@@ -1,0 +1,58 @@
+.about {
+ 
+  margin: 0;
+  padding: 50px 0;
+  background-image:linear-gradient(to bottom, rgb(43,57,70,0.96), rgb(43,57,70,0.96)),
+  url('/assets/adim.png');
+  h2{
+    padding: 0px 40px;
+   text-align: left;
+   margin-bottom: 30px;
+  }
+  .details {
+    height: 350px;
+    font-family: Quicksand;
+    overflow-y: auto;
+    direction: rtl;
+    padding: 0px 30px;
+    *{
+        padding: 0;
+    }
+    .text {
+      direction: ltr;
+    }
+    
+  }
+img{
+    height: 300px;
+}
+  /* Designing for scroll-bar */
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #3d5c7c;
+
+    border-radius: 0px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 0px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  ::-webkit-scrollbar-button {
+    // width: 50px; //for horizontal scrollbar
+
+    width: 22px;
+    height: 50px;
+  }
+}

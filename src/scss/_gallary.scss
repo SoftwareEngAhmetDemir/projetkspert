@@ -1,0 +1,21 @@
+.gallary {
+  .title {
+    display: flex;
+    justify-content: center;
+    height: 58px;
+    padding: 19px 0;
+    background: #b69662;
+    @include media-breakpoint-down(lg) {
+    height: auto;
+    padding: 15px;
+    text-align: center;
+    }
+  }
+}
+.back{
+  position: relative;
+  font-family: Archer;
+  background-image:linear-gradient(to bottom, rgb(224,224,224,0.85), rgb(224,224,224,0.85)),
+  url('/assets/map.png');
+  background-size: 100% 100%;
+}

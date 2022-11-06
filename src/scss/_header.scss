@@ -1,0 +1,122 @@
+#header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  .logo {
+    width: 170px;
+    height: 170px;
+    scale: 0.6;
+    position: absolute;
+    z-index: 3;
+  }
+
+  img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .text {
+    position: absolute;
+    z-index: 3;
+    top: 150px;
+    text-align: center;
+    color: #fff;
+    .fiyat {
+      * {
+        color: #ab834d;
+      }
+      font-weight: 300;
+      font-size: 7rem;
+      @include media-breakpoint-down(lg) {
+        font-size: 3rem;
+      }
+      line-height: 1;
+    }
+    .txt-buyuk {
+      // font-family: Quicksand;
+      font-weight: 300;
+      font-size: 3rem;
+      @include media-breakpoint-down(lg) {
+        font-size: 2rem;
+      }
+      line-height: 52px;
+      text-align: center;
+      color: #fff;
+    }
+    .history {
+      * {
+        color: #273745;
+      }
+      height: 50.28px;
+      font-weight: 500;
+      font-size: 1.2rem;
+      max-width: 70%;
+      position: relative;
+      left: 15%;
+      @include media-breakpoint-down(lg){
+        font-size: 1rem;
+        max-width: 85%;
+        left: 7.5%;
+        transform: translateX(7px);
+      }
+     
+     
+      &::before {
+        content: "";
+        position: relative;
+        width: 0;
+        height: 0;
+        border-top: 18px solid rgba(0, 0, 0, 0);
+        border-bottom: 18px solid rgba(0, 0, 0, 0);
+        border-left: 17px solid #273745;
+        @include media-breakpoint-down(lg) {
+          border-top: 22px solid rgba(0, 0, 0, 0);
+          border-bottom: 22px solid rgba(0, 0, 0, 0);
+          border-left: 22px solid #273745;
+        }
+        opacity: 0.94;
+      }
+      &::after {
+        content: "";
+        position: relative;
+        width: 0;
+        height: 0;
+        border-top: 18px solid rgba(0, 0, 0, 0);
+        border-bottom: 18px solid rgba(0, 0, 0, 0);
+        border-right: 17px solid #273745;
+        @include media-breakpoint-down(lg){
+          border-top: 22px solid rgba(0, 0, 0, 0);
+          border-bottom: 22px solid rgba(0, 0, 0, 0);
+          border-right: 22px solid #273745;
+        }
+        opacity: 0.94;
+        width: 0;
+      }
+    }
+  }
+}
+.background {
+  width: 100%;
+  height: 100vh;
+  background: #273745;
+  opacity: 0.94;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.right-border {
+  &::after {
+    content: "";
+    border-right: 1px solid #24333b;
+    opacity: 0.54;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+  }
+}

@@ -1,12 +1,8 @@
 @import "../bootstrap/scss/bootstrap";
-$color: yellow;
-.A{
-    background-color: $color;
-}
-
-
-@include media-breakpoint-down(sm) {
-    body{
-        background-color: red;
-    }
-}
+@import './header';
+@import'./gallary';
+@import './card';
+@import './adim';
+@import './about';
+@import './iconmoon';
+@import './map';

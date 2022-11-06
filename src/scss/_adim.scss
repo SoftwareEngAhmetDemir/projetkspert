@@ -1,0 +1,26 @@
+.adim {
+  position: relative;
+  opacity: 0.94;
+  font-family: Archer;
+  background-image:linear-gradient(to bottom, rgb(224,224,224,0.94), rgb(224,224,224,0.94)),
+  url('/assets/adim.png');
+  background-size: 100% 100%;
+  z-index: 2;
+  * {
+    font-weight: 600;
+    color: #273745;
+  }
+  a {
+    text-decoration: none;
+  }
+  img{
+    min-width: 60px;
+    max-width: 110px;
+  }
+  .right-borde{
+    border-right:4px solid;
+    @include media-breakpoint-down(lg){
+      border: 0;
+    }
+  }
+}

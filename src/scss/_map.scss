@@ -1,0 +1,11 @@
+.map * {
+    color: #2d3b49;
+  }
+.map{
+
+    position: relative;
+    font-family: Archer;
+    background-image:linear-gradient(to bottom, rgb(224,224,224,0.85), rgb(224,224,224,0.85)),
+    url('/assets/map.png');
+    background-size: 100% 100%;
+}
